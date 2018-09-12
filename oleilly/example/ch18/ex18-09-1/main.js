@@ -9,7 +9,6 @@ function highlightParas(containing) {
   }
 }
 
-
 function removeParaHighlights() {
   const paras = document.getElementsByTagName('p');
   for(let p of paras){
@@ -18,4 +17,19 @@ function removeParaHighlights() {
 }
 
 const highlightActions = document.querySelectorAll('[data-action="highlight"]');
-console.log(highlightActions[0].dataset);
+
+for(let a of highlightActions){
+  a.addEventListener('click', evt => {
+    evt.preventDefault();
+    highlightParas(a.dataset.containing);
+  });
+}
+
+const removeHighlightActions = document.querySelectorAll('[data-action="removeHighlights"]');
+
+for(let a of removeHighlightActions){
+  a.addEventListener('click', evt => {
+    evt.preventDefault();
+    removeParaHighlights();
+  })
+}
