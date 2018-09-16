@@ -1,0 +1,12 @@
+const array2 = [1, 4, [9, 16], 25, 36, NaN];
+console.log(array2.includes(1));
+console.log(array2.indexOf(1));
+console.log(array2.includes(0));
+console.log(array2.indexOf(0));
+console.log(array2.includes(16));
+console.log(array2.indexOf(16));
+console.log(array2.includes(NaN));
+console.log(array2.indexOf(NaN));
+console.log(["山,", "川", "やま", "かわ"].includes("山"));
+console.log(["山,", "川", "やま", "かわ"].includes("かわ"));
+console.log(["山,", "川", "やま", "かわ"].includes("革"));
