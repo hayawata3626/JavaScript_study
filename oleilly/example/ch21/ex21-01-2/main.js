@@ -9,3 +9,7 @@ class User {
     return this[USER_EMAIL];
   }
 }
+
+const u = new User();
+u.email = "hoee";
+console.log(u.email);
